@@ -1,0 +1,145 @@
+ALTER TABLE yelp_business
+ALTER COLUMN business_id   TYPE varchar(22),
+ALTER COLUMN name          TYPE varchar(255),
+ALTER COLUMN neighborhood  TYPE varchar(255),
+ALTER COLUMN address       TYPE varchar(255),
+ALTER COLUMN city          TYPE varchar(255),
+ALTER COLUMN state         TYPE varchar(255),
+ALTER COLUMN postal_code   TYPE varchar(255),
+ALTER COLUMN latitude      TYPE FLOAT,
+ALTER COLUMN longitude     TYPE FLOAT,
+ALTER COLUMN stars         TYPE FLOAT;
+
+ALTER TABLE yelp_business_attributes
+ALTER COLUMN    business_id                         TYPE varchar(22),
+ALTER COLUMN    "AcceptsInsurance"                  TYPE varchar(2),
+ALTER COLUMN    "ByAppointmentOnly"                 TYPE varchar(5),
+ALTER COLUMN    "BusinessAcceptsCreditCards"        TYPE varchar(5),
+ALTER COLUMN    "BusinessParking_garage"            TYPE varchar(5),
+ALTER COLUMN    "BusinessParking_street"            TYPE varchar(5),
+ALTER COLUMN    "BusinessParking_validated"         TYPE varchar(5),
+ALTER COLUMN    "BusinessParking_lot"               TYPE varchar(5),
+ALTER COLUMN    "BusinessParking_valet"             TYPE varchar(5),
+ALTER COLUMN    "HairSpecializesIn_coloring"        TYPE varchar(5),
+ALTER COLUMN    "HairSpecializesIn_africanamerican" TYPE varchar(4),
+ALTER COLUMN    "HairSpecializesIn_curly"           TYPE varchar(5),
+ALTER COLUMN    "HairSpecializesIn_perms"           TYPE varchar(5),
+ALTER COLUMN    "HairSpecializesIn_kids"            TYPE varchar(5),
+ALTER COLUMN    "HairSpecializesIn_extensions"      TYPE varchar(5),
+ALTER COLUMN    "HairSpecializesIn_asian"           TYPE varchar(5),
+ALTER COLUMN    "HairSpecializesIn_straightperms"   TYPE varchar(5),
+ALTER COLUMN    "RestaurantsPriceRange2"            TYPE varchar(4),
+ALTER COLUMN    "GoodForKids"                       TYPE varchar(2),
+ALTER COLUMN    "WheelchairAccessible"              TYPE varchar(5),
+ALTER COLUMN    "BikeParking"                       TYPE varchar(5),
+ALTER COLUMN    "Alcohol"                           TYPE varchar(5),
+ALTER COLUMN    "HasTV"                             TYPE varchar(13),
+ALTER COLUMN    "NoiseLevel"                        TYPE varchar(5),
+ALTER COLUMN    "RestaurantsAttire"                 TYPE varchar(9),
+ALTER COLUMN    "Music_dj"                          TYPE varchar(6),
+ALTER COLUMN    "Music_background_music"            TYPE varchar(5),
+ALTER COLUMN    "Music_no_music"                    TYPE varchar(5),
+ALTER COLUMN    "Music_karaoke"                     TYPE varchar(5),
+ALTER COLUMN    "Music_live"                        TYPE varchar(5),
+ALTER COLUMN    "Music_video"                       TYPE varchar(5),
+ALTER COLUMN    "Music_jukebox"                     TYPE varchar(5),
+ALTER COLUMN    "Ambience_romantic"                 TYPE varchar(5),
+ALTER COLUMN    "Ambience_intimate"                 TYPE varchar(5),
+ALTER COLUMN    "Ambience_classy"                   TYPE varchar(5),
+ALTER COLUMN    "Ambience_hipster"                  TYPE varchar(5),
+ALTER COLUMN    "Ambience_divey"                    TYPE varchar(5),
+ALTER COLUMN    "Ambience_touristy"                 TYPE varchar(5),
+ALTER COLUMN    "Ambience_trendy"                   TYPE varchar(5),
+ALTER COLUMN    "Ambience_upscale"                  TYPE varchar(5),
+ALTER COLUMN    "Ambience_casual"                   TYPE varchar(5),
+ALTER COLUMN    "RestaurantsGoodForGroups"          TYPE varchar(5),
+ALTER COLUMN    "Caters"                            TYPE varchar(5),
+ALTER COLUMN    "WiFi"                              TYPE varchar(5),
+ALTER COLUMN    "RestaurantsReservations"           TYPE varchar(4),
+ALTER COLUMN    "RestaurantsTakeOut"                TYPE varchar(5),
+ALTER COLUMN    "HappyHour"                         TYPE varchar(5),
+ALTER COLUMN    "GoodForDancing"                    TYPE varchar(5),
+ALTER COLUMN    "RestaurantsTableService"           TYPE varchar(5),
+ALTER COLUMN    "OutdoorSeating"                    TYPE varchar(5),
+ALTER COLUMN    "RestaurantsDelivery"               TYPE varchar(5),
+ALTER COLUMN    "BestNights_monday"                 TYPE varchar(5),
+ALTER COLUMN    "BestNights_tuesday"                TYPE varchar(5),
+ALTER COLUMN    "BestNights_friday"                 TYPE varchar(5),
+ALTER COLUMN    "BestNights_wednesday"              TYPE varchar(5),
+ALTER COLUMN    "BestNights_thursday"               TYPE varchar(5),
+ALTER COLUMN    "BestNights_sunday"                 TYPE varchar(5),
+ALTER COLUMN    "BestNights_saturday"               TYPE varchar(5),
+ALTER COLUMN    "GoodForMeal_dessert"               TYPE varchar(5),
+ALTER COLUMN    "GoodForMeal_latenight"             TYPE varchar(5),
+ALTER COLUMN    "GoodForMeal_lunch"                 TYPE varchar(5),
+ALTER COLUMN    "GoodForMeal_dinner"                TYPE varchar(5),
+ALTER COLUMN    "GoodForMeal_breakfast"             TYPE varchar(5),
+ALTER COLUMN    "GoodForMeal_brunch"                TYPE varchar(5),
+ALTER COLUMN    "CoatCheck"                         TYPE varchar(5),
+ALTER COLUMN    "Smoking"                           TYPE varchar(5),
+ALTER COLUMN    "DriveThru"                         TYPE varchar(7),
+ALTER COLUMN    "DogsAllowed"                       TYPE varchar(5),
+ALTER COLUMN    "BusinessAcceptsBitcoin"            TYPE varchar(5),
+ALTER COLUMN    "Open24Hours"                       TYPE varchar(5),
+ALTER COLUMN    "BYOBCorkage"                       TYPE varchar(5),
+ALTER COLUMN    "BYOB"                              TYPE varchar(11),
+ALTER COLUMN    "Corkage"                           TYPE varchar(2),
+ALTER COLUMN    "DietaryRestrictions_dairy-free"    TYPE varchar(2),
+ALTER COLUMN    "DietaryRestrictions_gluten-free"   TYPE varchar(5),
+ALTER COLUMN    "DietaryRestrictions_vegan"         TYPE varchar(5),
+ALTER COLUMN    "DietaryRestrictions_kosher"        TYPE varchar(5),
+ALTER COLUMN    "DietaryRestrictions_halal"         TYPE varchar(5),
+ALTER COLUMN    "DietaryRestrictions_soy-free"      TYPE varchar(5),
+ALTER COLUMN    "DietaryRestrictions_vegetarian"    TYPE varchar(5),
+ALTER COLUMN    "AgesAllowed"                       TYPE varchar(5),
+ALTER COLUMN    "RestaurantsCounterService"         TYPE varchar(7)
+);
+
+ALTER TABLE yelp_business_hours
+ALTER COLUMN business_id   	 TYPE varchar(22),
+ALTER COLUMN monday          TYPE varchar(11),
+ALTER COLUMN tuesday         TYPE varchar(11),
+ALTER COLUMN wednesday       TYPE varchar(11),
+ALTER COLUMN thursday        TYPE varchar(11),
+ALTER COLUMN friday          TYPE varchar(11),
+ALTER COLUMN saturday        TYPE varchar(11),
+ALTER COLUMN sunday          TYPE varchar(11);
+
+ALTER TABLE yelp_checkin
+ALTER COLUMN    business_id TYPE varchar(22),
+ALTER COLUMN    weekday     TYPE varchar(3),
+ALTER COLUMN    hour        TYPE varchar(5);
+
+ALTER TABLE yelp_review
+ALTER COLUMN    review_id 		TYPE varchar(22),
+ALTER COLUMN    user_id     	TYPE varchar(22),
+ALTER COLUMN    business_id     TYPE varchar(22),
+ALTER COLUMN    date            TYPE varchar(10),
+ALTER COLUMN    text            TYPE varchar(5056);
+
+ALTER TABLE yelp_tip
+ALTER COLUMN    text     		TYPE varchar(510),
+ALTER COLUMN    date        	TYPE varchar(10),
+ALTER COLUMN    business_id     TYPE varchar(22),
+ALTER COLUMN    user_id         TYPE varchar(22);
+
+ALTER TABLE yelp_user
+ALTER COLUMN    user_id    		TYPE varchar(22),
+ALTER COLUMN    name        	TYPE varchar(32),
+ALTER COLUMN    yelping_since   TYPE varchar(10),
+ALTER COLUMN    friends         TYPE varchar(359878),
+ALTER COLUMN    elite           TYPE varchar(76);
+
+
+select business_id,hour from yelp_checkin where weekday = 'Wed' and checkins >4;
+
+select max(review_count) as Max_review_count from yelp_business group by city ;
+
+select business_id, address, city from yelp_business where business_id in (
+    select business_id from yelp_categories  group by business_id,categories);
+	
+select name, review_count,year from yelp_user natural join yelp_elite ;
+
+select user_id, name, review_count from yelp_user order by review_count desc limit 10;
+
+
