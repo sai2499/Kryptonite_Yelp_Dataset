@@ -16,7 +16,7 @@ based on this dataset that can manage vast amounts of data and deliver insights 
 both consumers and businesses.
 
 ---
-### Targeted Audience
+### TARGETED AUDIENCE
 
 Owners that are prepared to monitor their firm and make significant decisions based on the visual plots, such as modifying the infrastructure or concentrating on an area that
 will help them expand, will be the system’s users. The dataset’s real-world goal is to offer relevant insights and assist current and prospective business owners in making 
